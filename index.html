@@ -3,71 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
 
-<!--https://www.lastpass.com/fr/features/password-generator-->
-
     <main>
-        <p>fast - secure - easy</p>
+        <p class="subtitle">fast - secure - easy</p>
         <h1>Password Generator</h1>
 
-        <div class="password-result">
-            <div class="result">
-                <input type="text" value="">
+        <div class="card-wrapper">
+            <div class="password-result">
+                <div class="result">
+                    <input id="inp-result" type="text">
 
-                <div class="functions">
-                    <div class="copy">Copy</div>
-                    <div class="generate">Generate</div>
-                </div>
-            </div>
-            <div class="security"></div>
-
-        </div>
-
-        <div class="card">
-            <h2>Personnalisez votre mot de passe</h2>
-            <hr>
-
-            <div class="card-content">
-                <div class="longueur">
-                    <input type="number" value="8" id="label-range" min="4" max="24">
-                    <input id="range-password" type="range" min="4" max="24" value="8">
-                </div>
-
-                <div class="difficulty">
-<!--                    if facile a dire = maj & min-->
-<!--                    if facile a lire = pas de I, l, O, 0, 1-->
-<!--                    if tout => tout-->
-                </div>
-
-                <div class="checkbox">
-                    <div class="inp-wrap">
-                        <input type="checkbox" id="lower" checked>
-                        <label for="lower">Minuscule</label>
+                    <div class="functions">
+                        <div class="copy">Copy</div>
+                        <div id="btnGenerate" class="generate">Generate</div>
                     </div>
                 </div>
-                <div class="inp-wrap">
-                    <input type="checkbox" id="upper">
-                    <label for="upper">Majuscule</label>
-                </div>
-                <div class="inp-wrap">
-                    <input type="checkbox" id="number">
-                    <label for="number">Chiffres</label>
-                </div>
-                <div class="inp-wrap">
-                    <input type="checkbox" id="symbole">
-                    <label for="symbole">Symboles</label>
-                </div>
+                <div class="security"></div>
 
             </div>
 
-            <button id="btnGenerate">Génerer</button>
+            <div class="card">
+                <h2>Personnalisez votre mot de passe</h2>
+                <hr>
 
+                <div class="card-content">
+                    <div class="longueur">
+                        <input type="number" value="8" id="label-range" min="4" max="24">
+                        <input id="range-password" type="range" min="4" max="24" value="8">
+                    </div>
+
+                    <div class="difficulty">
+                        <!--                    if facile a dire = maj & min-->
+                        <!--                    if facile a lire = pas de I, l, O, 0, 1-->
+                        <!--                    if tout => tout-->
+                    </div>
+
+                    <div class="checkbox">
+                        <div class="inp-wrap">
+                            <input class="option" type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Minuscule</label>
+                        </div>
+                    </div>
+                    <div class="inp-wrap">
+                        <input class="option" type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Majuscule</label>
+                    </div>
+                    <div class="inp-wrap">
+                        <input class="option" type="checkbox" id="numbers" checked>
+                        <label for="numbers">Chiffres</label>
+                    </div>
+                    <div class="inp-wrap">
+                        <input class="option" type="checkbox" id="symbols" checked>
+                        <label for="symbols">Symboles</label>
+                    </div>
+
+                </div>
+
+                <button>Copier</button>
+
+            </div>
         </div>
+
     </main>
 
-<script src="app.js"></script>
+<script src="./assets/app.js"></script>
 </body>
 </html>
