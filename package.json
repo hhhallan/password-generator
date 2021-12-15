@@ -1,0 +1,11 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/app.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/style/style.scss:./assets/style/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
