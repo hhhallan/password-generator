@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
@@ -16,58 +17,57 @@
                 <div class="result">
                     <input id="inp-result" type="text">
 
-                    <div class="functions">
-                        <div class="copy">Copy</div>
-                        <div id="btnGenerate" class="generate">Generate</div>
+                    <div class="functions" id="btnGenerate">
+                        <i class="fas fa-sync"></i>
                     </div>
                 </div>
-                <div class="security"></div>
+                <div class="bar-security">
+                    <div class="bar-color"></div>
+                </div>
 
             </div>
 
             <div class="card">
-                <h2>Personnalisez votre mot de passe</h2>
+                <h2>Personalize your password</h2>
                 <hr>
 
                 <div class="card-content">
                     <div class="longueur">
-                        <input type="number" value="8" id="label-range" min="4" max="24">
-                        <input id="range-password" type="range" min="4" max="24" value="8">
-                    </div>
-
-                    <div class="difficulty">
-                        <!--                    if facile a dire = maj & min-->
-                        <!--                    if facile a lire = pas de I, l, O, 0, 1-->
-                        <!--                    if tout => tout-->
+                        <input type="number" value="8" id="label-range" min="1" max="24">
+                        <input id="range-password" type="range" min="1" max="24" value="8">
                     </div>
 
                     <div class="checkbox">
                         <div class="inp-wrap">
                             <input class="option" type="checkbox" id="lowercase" checked>
-                            <label for="lowercase">Minuscule</label>
+                            <label for="lowercase">lowercase</label>
                         </div>
-                    </div>
-                    <div class="inp-wrap">
-                        <input class="option" type="checkbox" id="uppercase" checked>
-                        <label for="uppercase">Majuscule</label>
-                    </div>
-                    <div class="inp-wrap">
-                        <input class="option" type="checkbox" id="numbers" checked>
-                        <label for="numbers">Chiffres</label>
-                    </div>
-                    <div class="inp-wrap">
-                        <input class="option" type="checkbox" id="symbols" checked>
-                        <label for="symbols">Symboles</label>
+                        <div class="inp-wrap">
+                            <input class="option" type="checkbox" id="uppercase" checked>
+                            <label for="uppercase">UPPERCASE</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input class="option" type="checkbox" id="numbers" checked>
+                            <label for="numbers">Numb3rs</label>
+                        </div>
+                        <div class="inp-wrap">
+                            <input class="option" type="checkbox" id="symbols" checked>
+                            <label for="symbols">$ymb°(s</label>
+                        </div>
                     </div>
 
                 </div>
 
-                <button>Copier</button>
 
             </div>
+                <button id="btnCopy">Copy</button>
         </div>
 
+        <div class="modal">
+            <h3>Password copied!</h3>
+        </div>
     </main>
+
 
 <script src="./assets/app.js"></script>
 </body>

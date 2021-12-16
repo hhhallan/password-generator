@@ -1,24 +1,14 @@
 // COLORS
 $red: #DD2222;
+$green: #98CB6F;
 
 // IMPORTS
 @import "general";
+@import "card";
 @import "result";
 @import "options";
 
-.card-wrapper {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.password-result, .card {
-    padding: 20px;
-    border-radius: 2px;
-    background-color: crimson;
-}
-
-.password-result {
-    display: flex;
-    flex-direction: column;
+input[type=range]#range-password {
+  background-color: $red;
+  color: $red;
 }
